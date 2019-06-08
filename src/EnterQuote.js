@@ -5,7 +5,7 @@ class EnterQuote extends React.Component {
     return (
       <div className="input-group">
         <textarea
-          className="form-control m-3"
+          className="form-control m-3 col-md"
           aria-label="With textarea"
           placeholder="Enter your quote here..."
         />

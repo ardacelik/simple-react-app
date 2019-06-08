@@ -10,10 +10,12 @@ class App extends React.Component {
     return (
       <div className="container">
         <h1 className="m-3 text-center">Quote Keeper</h1>
-        <EnterQuote />
-        <SaveQuoteButton />
-        <DeleteQuoteButton />
-        <SeeAllQuotesButton />
+        <div className="row justify-content-center">
+          <EnterQuote />
+          <SaveQuoteButton />
+          <DeleteQuoteButton />
+          <SeeAllQuotesButton />
+        </div>
       </div>
     );
   }
