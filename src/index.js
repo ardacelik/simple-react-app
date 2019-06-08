@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import EnterQuote from "./EnterQuote";
+import SaveQuoteButton from "./SaveQuoteButton";
+import DeleteQuoteButton from "./DeleteQuoteButton";
+import SeeAllQuotesButton from "./SeeAllQuotesButton";
 
 class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="row align-items-center">
-            <h1 className="">Hello World!</h1>
-          </div>
-        </div>
+        <h1 className="m-3 text-center">Quote Keeper</h1>
+        <EnterQuote />
+        <SaveQuoteButton />
+        <DeleteQuoteButton />
+        <SeeAllQuotesButton />
       </div>
     );
   }
