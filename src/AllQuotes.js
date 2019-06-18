@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export class AllQuotes extends React.Component {
+class AllQuotes extends React.Component {
+  getQ() {
+    // const el = document.querySelector("#quoteAppearsHere");
+    console.log("Hello");
+  }
+
   render() {
     return (
       <div className="container">
@@ -13,7 +18,7 @@ export class AllQuotes extends React.Component {
               Enter a quote
             </button>
           </Link>
-          <div id="quoteAppearsHere" />
+          <div id="quoteAppearsHere">Hi</div>
         </div>
       </div>
     );

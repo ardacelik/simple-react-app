@@ -1,4 +1,4 @@
-import { AllQuotes } from "./AllQuotes.js";
+import AllQuotes from "./AllQuotes";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -8,12 +8,10 @@ class CardComponent extends React.Component {
   };
 
   saveQuote = event => {
-    const quoteLocationOnUI = document.getElementById("quoteAppearsHere");
-
-    console.log(quoteLocationOnUI);
-
+    //console.log(AllQuotes.getQ);
+    //const quoteLocationOnUI = document.getElementById("quoteAppearsHere");
+    //console.log(quoteLocationOnUI);
     //let textnode = document.createTextNode(this.state.quote);
-
     //quoteLocationOnUI.appendChild(textnode);
   };
 
