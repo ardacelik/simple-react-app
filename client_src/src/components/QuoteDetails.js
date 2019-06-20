@@ -19,9 +19,17 @@ class QuoteDetails extends Component {
     axios
       .get(`http://localhost:3000/api/quote-keepers/${quoteId}`)
       .then(response => {
-        this.setState({ details: response.data }, () =>
-          console.log(this.state)
-        );
+        this.setState({ details: response.data });
+      })
+      .catch(err => console.log(err));
+  }
+
+  onDelete() {
+    let quoteId = this.state.details.id;
+    axios
+      .delete(`http://localhost:3000/api/quote-keepers/${quoteId}`)
+      .then(response => {
+        this.props.history.push("/");
       })
       .catch(err => console.log(err));
   }
@@ -43,7 +51,12 @@ class QuoteDetails extends Component {
         >
           Edit
         </Link>
-        <button className="btn btn-danger btn-block">Delete</button>
+        <button
+          className="btn btn-danger btn-block"
+          onClick={this.onDelete.bind(this)}
+        >
+          Delete
+        </button>
       </div>
     );
   }
